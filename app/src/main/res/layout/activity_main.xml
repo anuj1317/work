@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:layout_width="@dimen/_20sdp"
+        android:id="@+id/vector"
+        android:src="@drawable/drawer"
+        android:background="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <ImageButton
+        android:layout_marginTop="@dimen/_15sdp"
+       android:layout_marginRight="@dimen/_15ssp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_width="@dimen/_18sdp"
+        android:id="@+id/vector2"
+        android:src="@drawable/bell"
+        android:background="@android:color/transparent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/welcome"
+        android:layout_width="@dimen/_281sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintTop_toBottomOf="@+id/vector"
+        android:text="Welcome back"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_36sdp"
+        android:textFontWeight="600"
+        android:gravity="top"
+        android:fontFamily="@font/poppims_semibold"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintBottom_toTopOf="@+id/date"
+        app:layout_constraintStart_toStartOf="@+id/vector"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        android:text="03/2021/February 4:21pm"
+        android:textColor="#5E6272"
+        android:textSize="@dimen/_10sdp"
+        android:textFontWeight="600"
+        android:gravity="top"
+        android:fontFamily="@font/poppims_semibold"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@+id/checkin"
+       app:layout_constraintStart_toStartOf="@+id/welcome"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkin"
+        android:layout_width="@dimen/_295sdp"
+        android:layout_height="@dimen/_58sdp"
+        android:text="Check in"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        app:backgroundTint="#246BFD"
+        app:cornerRadius="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintBottom_toTopOf="@+id/checkout"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkout"
+        android:layout_width="@dimen/_295sdp"
+        android:layout_height="@dimen/_58sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="Check out"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        app:backgroundTint="#262A34"
+        app:cornerRadius="@dimen/_13sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkin"
+        app:layout_constraintBottom_toTopOf="@+id/cardview"
+        />
+
+   <com.google.android.material.card.MaterialCardView
+       android:id="@+id/cardview"
+       android:layout_width="@dimen/_300sdp"
+       android:layout_height="@dimen/_120sdp"
+       app:layout_constraintTop_toBottomOf="@+id/checkout"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:cardCornerRadius="@dimen/_15sdp"
+       android:layout_marginTop="@dimen/_20sdp"
+
+
+       >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/cardgradient"
+        >
+
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/circularbutton"
+            android:src="@drawable/ic_close"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/prog"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:text="Today's Task Progress"
+            android:fontFamily="@font/poppims_semibold"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/taskdetail"
+            android:textColor="#200745"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/taskdetail"
+            android:layout_height="@dimen/_14sdp"
+            android:layout_width="wrap_content"
+            android:text="0/5 is completed"
+            android:fontFamily="@font/poppims_semibold"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/prog"
+            app:layout_constraintStart_toStartOf="@+id/prog"
+            app:layout_constraintBottom_toTopOf="@+id/progress"
+            android:textColor="#200745"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="@dimen/_201sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:max="100"
+            android:progress="25"
+            android:progressTint="#0C2EEF"
+            android:progressBackgroundTint="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/taskdetail"
+            app:layout_constraintTop_toBottomOf="@+id/taskdetail"
+
+            android:layout_marginTop="@dimen/_15sdp"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_12sdp"
+            android:textColor="#200745"
+            android:text="00.00%"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/taskdetail"
+            app:layout_constraintStart_toEndOf="@+id/progress"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
