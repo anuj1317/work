@@ -27,20 +27,20 @@
     <!--     bottomNavigationFragment-->
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/bottom_home"
+        android:name="com.example.workers1.ui.dashboard.DashboardFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/bottom_dashboard"
         android:name="com.example.workers1.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
-    <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.workers1.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/bottom_notifications"
         android:name="com.example.workers1.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
