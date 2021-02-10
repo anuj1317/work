@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <ImageButton
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:layout_width="@dimen/_20sdp"
+        android:id="@+id/vector"
+        android:src="@drawable/ic_baseline_arrow_back"
+        android:background="@android:color/transparent"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <ImageButton
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_21ssp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_width="@dimen/_18sdp"
+        android:id="@+id/vector2"
+        android:src="@drawable/bell"
+        android:background="@android:color/transparent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/todaytasks"
+        android:layout_width="@dimen/_281sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toBottomOf="@+id/vector"
+        android:text="Todays Tasks"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_36sdp"
+        android:textFontWeight="600"
+        android:gravity="top"
+        android:fontFamily="@font/poppims_semibold"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/date"
+        app:layout_constraintStart_toStartOf="@+id/vector"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintBottom_toTopOf="@+id/card1"
+        app:layout_constraintStart_toStartOf="@+id/todaytasks"
+        app:layout_constraintTop_toBottomOf="@+id/todaytasks"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/alltasks"
+            android:text="All Tasks"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/_2sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_width="@dimen/_88sdp"
+            android:background="@drawable/buttonradius"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/complete"
+            android:layout_width="@dimen/_88sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/buttonradius"
+            android:text="Completed"
+            android:textAllCaps="false"
+            app:backgroundTint="@android:color/transparent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pending"
+            android:layout_width="@dimen/_88sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/buttonradius"
+            android:text="Pending"
+            android:textAllCaps="false"
+            app:backgroundTint="@android:color/transparent"
+            app:iconTint="@android:color/transparent" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/linear"
+       app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card2"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@drawable/cardborder"
+            >
+
+            <ImageButton
+                android:layout_height="@dimen/_26sdp"
+                android:layout_width="@dimen/_26sdp"
+                android:background="@drawable/circularbutton"
+                android:backgroundTint="#262A34"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/_13sdp"
+                android:src="@drawable/tick"
+                />
+
+            <ImageButton
+                android:id="@+id/tickbutton"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:background="@drawable/circularbutton"
+                android:backgroundTint="#9ADB7F"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/linear2"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/tick"
+                />
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tickbutton"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/gradecheck1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="Grade check(pit id:M5164)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:fontFamily="@font/poppims_semibold"
+
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/time1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_16sdp"
+
+                    android:text="Today 10 am"
+                    android:textColor="#9ADB7F"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppims_semibold"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_70sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/card1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card3"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="#262A34"
+            >
+
+            <ImageButton
+                android:layout_height="@dimen/_26sdp"
+                android:layout_width="@dimen/_26sdp"
+                android:background="@drawable/circularbutton"
+                android:backgroundTint="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/_13sdp"
+                />
+
+            <ProgressBar
+                android:id="@+id/tickbutton2"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Large.Inverse"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:max="100"
+                android:progress="25"
+                android:progressTint="@color/teal_700"
+                android:progressBackgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/_15sdp"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tickbutton2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/gradecheck2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="Grade check (pit id:M5165)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:fontFamily="@font/poppims_semibold"
+
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_16sdp"
+
+                    android:text="Today 11:00am"
+                    android:textColor="#FBA3FF"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppims_semibold"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card3"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_70sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/card2"
+        app:layout_constraintStart_toStartOf="@+id/card2"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="#262A34"
+            >
+
+            <ImageButton
+                android:layout_height="@dimen/_26sdp"
+                android:layout_width="@dimen/_26sdp"
+                android:background="@drawable/circularbutton"
+                android:backgroundTint="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/_13sdp"
+                />
+
+            <ProgressBar
+                android:id="@+id/tickbutton3"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Large.Inverse"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:max="100"
+                android:progress="25"
+                android:progressTint="@color/teal_700"
+                android:progressBackgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/_15sdp"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tickbutton3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/gradecheck3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="Back filling (pit id:M5145)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:fontFamily="@font/poppims_semibold"
+
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/time3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_16sdp"
+
+                    android:text="Today 12:00am"
+                    android:textColor="#FBA3FF"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppims_semibold"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
