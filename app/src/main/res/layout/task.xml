@@ -6,23 +6,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black">
 
-    <ImageButton
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="@dimen/_22sdp"
+        android:layout_width="@dimen/_22sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginLeft="@dimen/_24sdp"
-        android:layout_height="@dimen/_14sdp"
-        android:layout_width="@dimen/_20sdp"
         android:id="@+id/vector"
-        android:src="@drawable/ic_baseline_arrow_back"
-        android:background="@android:color/transparent"
-       app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
+        >
+
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
 
     <ImageButton
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginRight="@dimen/_21ssp"
-        android:layout_height="@dimen/_17sdp"
-        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_20sdp"
         android:id="@+id/vector2"
         android:src="@drawable/bell"
         android:background="@android:color/transparent"
@@ -64,6 +76,7 @@
             android:layout_margin="@dimen/_2sdp"
             android:layout_height="@dimen/_28sdp"
             android:layout_width="@dimen/_88sdp"
+            android:textColor="@color/white"
             android:background="@drawable/buttonradius"
             />
 
@@ -74,6 +87,7 @@
             android:layout_margin="@dimen/_2sdp"
             android:background="@drawable/buttonradius"
             android:text="Completed"
+            android:textColor="@color/white"
             android:textAllCaps="false"
             app:backgroundTint="@android:color/transparent" />
 
@@ -84,6 +98,7 @@
             android:layout_margin="@dimen/_2sdp"
             android:background="@drawable/buttonradius"
             android:text="Pending"
+            android:textColor="@color/white"
             android:textAllCaps="false"
             app:backgroundTint="@android:color/transparent"
             app:iconTint="@android:color/transparent" />
@@ -203,8 +218,8 @@
             >
 
             <ImageButton
-                android:layout_height="@dimen/_26sdp"
-                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_width="@dimen/_28sdp"
                 android:background="@drawable/circularbutton"
                 android:backgroundTint="@color/black"
                 app:layout_constraintTop_toTopOf="parent"
@@ -215,17 +230,26 @@
 
             <ProgressBar
                 android:id="@+id/tickbutton2"
-                style="@android:style/Widget.Holo.Light.ProgressBar.Large.Inverse"
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
                 android:max="100"
-                android:progress="25"
-                android:progressTint="@color/teal_700"
-                android:progressBackgroundTint="@color/white"
+                android:progress="50"
+                android:progressDrawable="@drawable/progressdrawable"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginLeft="@dimen/_15sdp"
+                />
+            <ImageButton
+                android:layout_height="@dimen/_6sdp"
+                android:layout_width="@dimen/_6sdp"
+                android:background="@drawable/circularbutton"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/_24sdp"
 
                 />
 
@@ -294,8 +318,8 @@
             >
 
             <ImageButton
-                android:layout_height="@dimen/_26sdp"
-                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_width="@dimen/_28sdp"
                 android:background="@drawable/circularbutton"
                 android:backgroundTint="@color/black"
                 app:layout_constraintTop_toTopOf="parent"
@@ -306,17 +330,26 @@
 
             <ProgressBar
                 android:id="@+id/tickbutton3"
-                style="@android:style/Widget.Holo.Light.ProgressBar.Large.Inverse"
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
                 android:max="100"
-                android:progress="25"
-                android:progressTint="@color/teal_700"
-                android:progressBackgroundTint="@color/white"
+                android:progress="50"
+                android:progressDrawable="@drawable/progressdrawable"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginLeft="@dimen/_15sdp"
+                />
+            <ImageButton
+                android:layout_height="@dimen/_6sdp"
+                android:layout_width="@dimen/_6sdp"
+                android:background="@drawable/circularbutton"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/_24sdp"
 
                 />
 

@@ -8,11 +8,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.task2)
 
-       checkin.setOnClickListener {
-           val intent=Intent(this,MainActivity2::class.java)
-           startActivity(intent)
-       }
+//       checkin.setOnClickListener {
+//           val intent=Intent(this,MainActivity2::class.java)
+//           startActivity(intent)
+//       }
     }
 }

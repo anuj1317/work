@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="@dimen/_22sdp"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:id="@+id/vector"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/profile"
+        >
+
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/profile"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_width="@dimen/_58sdp"
+        android:textSize="@dimen/_18sdp"
+        android:textFontWeight="600"
+        android:fontFamily="@font/poppims_semibold"
+        android:text="Profile"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/vector"
+        android:layout_marginLeft="@dimen/_70sdp"
+
+
+        android:layout_marginTop="@dimen/_15sdp"
+        />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="@dimen/_30sdp"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:id="@+id/vector2"
+        app:strokeColor="#246BFD"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/_21ssp"
+    app:layout_constraintRight_toRightOf="parent"
+        >
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:text="Edit"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/white"
+        />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/avataricon1"
+        android:layout_width="@dimen/_187sdp"
+        android:layout_height="@dimen/_187sdp"
+        app:cardCornerRadius="250dp"
+        app:cardBackgroundColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        android:layout_marginTop="@dimen/_60sdp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_187sdp"
+            android:layout_height="@dimen/_187sdp"
+            app:cardCornerRadius="250dp"
+            app:cardBackgroundColor="@color/teal_200"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_180sdp"
+                android:src="@drawable/avataricon"
+                android:layout_gravity="center_vertical"
+
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/name"
+        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_240sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avataricon1"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+    <com.google.android.material.textview.MaterialTextView
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Blake Gordon"
+        android:textFontWeight="600"
+        android:textSize="@dimen/_32sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppims_semibold"
+        android:layout_gravity="center"
+
+        />
+        <com.google.android.material.textview.MaterialTextView
+
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="blake@email.com"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="#BBFFE7
+"
+            android:fontFamily="@font/poppims_semibold"
+            android:layout_gravity="center"
+
+            />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

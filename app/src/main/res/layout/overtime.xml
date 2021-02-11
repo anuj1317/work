@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    >
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="@dimen/_22sdp"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:id="@+id/vector"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageButton
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_21ssp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_20sdp"
+        android:id="@+id/vector2"
+        android:src="@drawable/bell"
+        android:background="@android:color/transparent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/todaytasks"
+        android:layout_width="@dimen/_281sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toBottomOf="@+id/vector"
+        android:text="Over Time"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_36sdp"
+        android:textFontWeight="600"
+        android:gravity="top"
+        android:fontFamily="@font/poppims_semibold"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/avatarlayout"
+        app:layout_constraintStart_toStartOf="@+id/vector"
+        />
+
+    <LinearLayout
+        android:id="@+id/avatarlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_25sdp"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todaytasks"
+        app:layout_constraintStart_toStartOf="@+id/todaytasks"
+        app:layout_constraintBottom_toTopOf="@+id/scrollview1"
+        >
+
+
+        <ImageButton
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/circleview"
+            android:backgroundTint="@color/teal_200"
+            android:src="@drawable/avataricon"
+            android:layout_gravity="center"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_height="@dimen/_24sdp"
+            android:layout_width="@dimen/_94sdp"
+            android:text="Derek Doyle"
+            android:layout_weight="600"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            />
+
+        <ImageButton
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:background="@drawable/circlestroke"
+            android:src="@drawable/ic_calender"
+            android:tint="@android:color/holo_green_light"
+            android:layout_marginLeft="@dimen/_5sdp"
+
+            />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_gravity="center"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_height="@dimen/_24sdp"
+                android:layout_width="@dimen/_58sdp"
+                android:text="Due Date"
+                android:textColor="#5E6272"
+                android:textSize="@dimen/_13sdp"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_height="@dimen/_24sdp"
+                android:layout_width="@dimen/_48sdp"
+                android:text="Today"
+                android:textColor="#A5F59C"
+                android:textSize="@dimen/_16sdp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatarlayout"
+
+        android:layout_marginTop="@dimen/_20sdp"
+        >
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+
+           >
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_height="@dimen/_100sdp"
+               android:layout_width="@dimen/_280sdp"
+               android:id="@+id/totalhourscard"
+               app:cardCornerRadius="@dimen/_10sdp"
+               app:cardBackgroundColor="#262A34"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintBottom_toTopOf="@+id/schedulecard"
+               android:layout_marginLeft="@dimen/_20sdp"
+               >
+
+               <LinearLayout
+                   android:layout_height="match_parent"
+                   android:layout_width="match_parent"
+                   android:orientation="vertical"
+                   >
+
+                   <LinearLayout
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:orientation="horizontal"
+                       >
+
+                       <ImageView
+                           android:layout_height="@dimen/_40sdp"
+                           android:layout_width="@dimen/_40sdp"
+                           android:src="@drawable/payslipicon"
+                           android:layout_marginLeft="@dimen/_20sdp"
+                           android:layout_marginTop="@dimen/_20sdp"
+                           />
+                       <com.google.android.material.textview.MaterialTextView
+                           android:layout_height="@dimen/_24sdp"
+                           android:layout_width="@dimen/_89sdp"
+                           android:text="Total Hours"
+                           android:layout_weight="600"
+                           android:textColor="@color/white"
+                           android:textSize="@dimen/_16sdp"
+                           android:layout_marginTop="@dimen/_20sdp"
+                           android:layout_marginLeft="@dimen/_20sdp"
+                           />
+
+                       <com.google.android.material.card.MaterialCardView
+
+                           android:layout_width="@dimen/_93sdp"
+                           android:layout_height="@dimen/_24sdp"
+                           android:layout_marginTop="@dimen/_20sdp"
+                           android:layout_marginLeft="@dimen/_15sdp"
+                           app:cardCornerRadius="@dimen/_20sdp"
+                           app:cardBackgroundColor="#A06AF9"
+                           >
+                           <LinearLayout
+                               android:layout_height="match_parent"
+                               android:layout_width="match_parent"
+                               android:orientation="horizontal"
+                               >
+                               <com.google.android.material.textview.MaterialTextView
+                                   android:layout_height="@dimen/_24sdp"
+                                   android:layout_width="@dimen/_56sdp"
+                                   android:text="Monthly"
+                                   android:layout_weight="600"
+                                   android:textColor="@color/white"
+                                   android:textSize="@dimen/_14sdp"
+                                   android:layout_marginLeft="@dimen/_10sdp"
+                                   android:layout_gravity="center_vertical"
+                                   />
+                               <ImageButton
+                                   android:layout_height="match_parent"
+                                   android:layout_width="wrap_content"
+                                   android:src="@drawable/downarrow"
+                                   android:backgroundTint="@android:color/transparent"
+
+                                   />
+
+                           </LinearLayout>
+
+                       </com.google.android.material.card.MaterialCardView>
+
+
+                   </LinearLayout>
+
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_height="@dimen/_24sdp"
+                       android:layout_width="@dimen/_24sdp"
+                       android:text="30/56"
+                       android:textColor="#5E6272"
+                       android:textSize="@dimen/_8sdp"
+                       android:layout_gravity="center_horizontal"
+                       />
+
+                   <ProgressBar
+                       android:layout_gravity="center_horizontal"
+                       android:id="@+id/progress"
+                       style="@android:style/Widget.ProgressBar.Horizontal"
+                       android:layout_width="@dimen/_240sdp"
+                       android:layout_height="@dimen/_4sdp"
+                       android:max="100"
+                       android:progress="25"
+                       android:progressTint="@android:color/holo_purple"
+                       android:progressBackgroundTint="#5E6272"
+                       />
+
+
+
+
+
+
+
+
+
+               </LinearLayout>
+
+
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/schedulecard"
+               android:layout_width="@dimen/_280sdp"
+               android:layout_height="@dimen/_80sdp"
+               app:cardCornerRadius="@dimen/_15sdp"
+               android:layout_marginTop="@dimen/_15sdp"
+               app:layout_constraintTop_toBottomOf="@+id/totalhourscard"
+              app:layout_constraintStart_toStartOf="@+id/totalhourscard"
+               app:layout_constraintBottom_toTopOf="@+id/startovertimecard"
+
+               >
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_height="match_parent"
+                   android:layout_width="match_parent"
+                   android:background="#262A34"
+                   >
+
+                   <ImageButton
+                       android:layout_height="@dimen/_28sdp"
+                       android:layout_width="@dimen/_28sdp"
+                       android:background="@drawable/circularbutton"
+                       android:backgroundTint="@color/black"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginLeft="@dimen/_13sdp"
+                       />
+
+                   <ProgressBar
+                       android:id="@+id/tickbutton3"
+                       style="?android:progressBarStyleHorizontal"
+                       android:layout_width="@dimen/_24sdp"
+                       android:layout_height="@dimen/_24sdp"
+                       android:max="100"
+                       android:progress="50"
+                      android:progressDrawable="@drawable/progressdrawable"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginLeft="@dimen/_15sdp"
+                       />
+                   <ImageButton
+                       android:layout_height="@dimen/_6sdp"
+                       android:layout_width="@dimen/_6sdp"
+                       android:background="@drawable/circularbutton"
+                       android:backgroundTint="@color/white"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginLeft="@dimen/_24sdp"
+
+                       />
+
+
+                   <LinearLayout
+                       android:id="@+id/linear4"
+                       android:orientation="vertical"
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toRightOf="@+id/tickbutton3"
+                       app:layout_constraintRight_toRightOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginHorizontal="@dimen/_15sdp"
+                       >
+
+                       <com.google.android.material.textview.MaterialTextView
+                           android:id="@+id/gradecheck3"
+                           android:layout_width="wrap_content"
+                           android:layout_height="@dimen/_24sdp"
+                           android:text="Schedule Overtime"
+                           android:textColor="@color/white"
+                           android:textSize="@dimen/_16sdp"
+                           android:fontFamily="@font/poppims_semibold"
+
+                           />
+                       <com.google.android.material.textview.MaterialTextView
+                           android:id="@+id/time3"
+                           android:layout_width="wrap_content"
+                           android:layout_height="@dimen/_16sdp"
+                           android:text="Today"
+                           android:textColor="#FBA3FF"
+                           android:textSize="@dimen/_12sdp"
+                           android:fontFamily="@font/poppims_semibold"
+                           />
+
+                   </LinearLayout>
+
+
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/startovertimecard"
+               android:layout_width="@dimen/_280sdp"
+               android:layout_height="@dimen/_80sdp"
+               app:cardCornerRadius="@dimen/_15sdp"
+               android:layout_marginTop="@dimen/_15sdp"
+               app:layout_constraintTop_toBottomOf="@+id/schedulecard"
+               app:layout_constraintStart_toStartOf="@+id/schedulecard"
+               app:layout_constraintBottom_toTopOf="@+id/endtimecard"
+               >
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_height="match_parent"
+                   android:layout_width="match_parent"
+                   android:background="#262A34"
+                   >
+
+                   <ImageButton
+                       android:layout_height="@dimen/_28sdp"
+                       android:layout_width="@dimen/_28sdp"
+                       android:background="@drawable/circularbutton"
+                       android:backgroundTint="@color/black"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginLeft="@dimen/_13sdp"
+                       />
+
+                   <ProgressBar
+                       android:id="@+id/tickbutton4"
+                       style="?android:progressBarStyleHorizontal"
+                       android:layout_width="@dimen/_24sdp"
+                       android:layout_height="@dimen/_24sdp"
+                       android:max="100"
+                       android:progress="50"
+                       android:progressDrawable="@drawable/progressdrawable"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginLeft="@dimen/_15sdp"
+                       />
+
+                   <ImageButton
+                       android:layout_height="@dimen/_6sdp"
+                       android:layout_width="@dimen/_6sdp"
+                       android:background="@drawable/circularbutton"
+                       android:backgroundTint="@color/white"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginLeft="@dimen/_24sdp"
+
+                       />
+
+                   <LinearLayout
+                       android:id="@+id/linear5"
+                       android:orientation="vertical"
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toRightOf="@+id/tickbutton4"
+                       app:layout_constraintRight_toRightOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginHorizontal="@dimen/_15sdp"
+                       >
+
+                       <com.google.android.material.textview.MaterialTextView
+                           android:id="@+id/gradecheck4"
+                           android:layout_width="wrap_content"
+                           android:layout_height="@dimen/_24sdp"
+                           android:text="Start Over Time"
+                           android:textColor="@color/white"
+                           android:textSize="@dimen/_16sdp"
+                           android:fontFamily="@font/poppims_semibold"
+
+                           />
+                       <com.google.android.material.textview.MaterialTextView
+                           android:id="@+id/time4"
+                           android:layout_width="wrap_content"
+                           android:layout_height="@dimen/_16sdp"
+                           android:text="Feb 03"
+                           android:textColor="#FBA3FF"
+                           android:textSize="@dimen/_12sdp"
+                           android:fontFamily="@font/poppims_semibold"
+                           />
+
+                   </LinearLayout>
+
+
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/endtimecard"
+               android:layout_width="@dimen/_280sdp"
+               android:layout_height="@dimen/_80sdp"
+               app:cardCornerRadius="@dimen/_15sdp"
+               android:layout_marginTop="@dimen/_15sdp"
+               app:layout_constraintTop_toBottomOf="@+id/startovertimecard"
+               app:layout_constraintStart_toStartOf="@+id/startovertimecard"
+               app:layout_constraintBottom_toTopOf="@+id/linearcard"
+               >
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_height="match_parent"
+                   android:layout_width="match_parent"
+                   android:background="#262A34"
+                   >
+
+                   <ImageButton
+                       android:layout_height="@dimen/_28sdp"
+                       android:layout_width="@dimen/_28sdp"
+                       android:background="@drawable/circularbutton"
+                       android:backgroundTint="@color/black"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginLeft="@dimen/_13sdp"
+                       />
+
+                   <ProgressBar
+                       android:id="@+id/tickbutton5"
+                       style="?android:progressBarStyleHorizontal"
+                       android:layout_width="@dimen/_24sdp"
+                       android:layout_height="@dimen/_24sdp"
+                       android:max="100"
+                       android:progress="50"
+                       android:progressDrawable="@drawable/progressdrawable"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginLeft="@dimen/_15sdp"
+                       />
+
+                   <ImageButton
+                       android:layout_height="@dimen/_6sdp"
+                       android:layout_width="@dimen/_6sdp"
+                       android:background="@drawable/circularbutton"
+                       android:backgroundTint="@color/white"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginLeft="@dimen/_24sdp"
+
+                       />
+
+                   <LinearLayout
+                       android:id="@+id/linear6"
+                       android:orientation="vertical"
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toRightOf="@+id/tickbutton5"
+                       app:layout_constraintRight_toRightOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginHorizontal="@dimen/_15sdp"
+                       >
+
+                       <com.google.android.material.textview.MaterialTextView
+                           android:id="@+id/gradecheck5"
+                           android:layout_width="wrap_content"
+                           android:layout_height="@dimen/_24sdp"
+                           android:text="End Over Time"
+                           android:textColor="@color/white"
+                           android:textSize="@dimen/_16sdp"
+                           android:fontFamily="@font/poppims_semibold"
+
+                           />
+                       <com.google.android.material.textview.MaterialTextView
+                           android:id="@+id/time5"
+                           android:layout_width="wrap_content"
+                           android:layout_height="@dimen/_16sdp"
+                           android:text="Feb 03"
+                           android:textColor="#FBA3FF"
+                           android:textSize="@dimen/_12sdp"
+                           android:fontFamily="@font/poppims_semibold"
+                           />
+
+                   </LinearLayout>
+
+
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/linearcard"
+               android:layout_height="@dimen/_80sdp"
+               android:layout_width="@dimen/_280sdp"
+               app:cardCornerRadius="@dimen/_15sdp"
+               android:layout_marginTop="@dimen/_15sdp"
+               app:layout_constraintTop_toBottomOf="@+id/endtimecard"
+               app:layout_constraintStart_toStartOf="@+id/endtimecard"
+               app:layout_constraintRight_toRightOf="parent"
+               android:layout_marginBottom="@dimen/_15sdp"
+               >
+
+               <LinearLayout
+                   android:weightSum="2"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal"
+                   android:background="#262A34">
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_height="match_parent"
+                       android:layout_width="wrap_content"
+                       android:orientation="vertical"
+                       android:gravity="center">
+                       <com.google.android.material.textview.MaterialTextView
+                           android:layout_width="@dimen/_66sdp"
+                           android:layout_height="@dimen/_24sdp"
+                           android:text="Start Time"
+                           android:textColor="#5E6272"
+                           android:textSize="@dimen/_13sdp"
+                           />
+
+                       <com.google.android.material.textview.MaterialTextView
+                           android:layout_width="@dimen/_87sdp"
+                           android:layout_height="@dimen/_24sdp"
+                           android:text="00:00AM"
+                           android:layout_marginLeft="@dimen/_10sdp"
+                           android:textColor="#C25FFF"
+                           android:textSize="@dimen/_18sdp"
+                           />
+
+
+                   </LinearLayout>
+
+                   <View
+                       android:layout_width="2dp"
+                       android:layout_height="match_parent"
+                       android:layout_marginTop="4dp"
+                       android:background="@android:color/darker_gray" />
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_height="match_parent"
+                       android:layout_width="wrap_content"
+                       android:orientation="vertical"
+                       android:gravity="center">
+                       <com.google.android.material.textview.MaterialTextView
+                           android:layout_width="@dimen/_66sdp"
+                           android:layout_height="@dimen/_24sdp"
+                           android:text="End Time"
+                           android:textColor="#5E6272"
+                           android:textSize="@dimen/_13sdp"
+                           />
+
+                       <com.google.android.material.textview.MaterialTextView
+                           android:layout_width="@dimen/_87sdp"
+                           android:layout_height="@dimen/_24sdp"
+                           android:text="00:00AM"
+                           android:layout_marginLeft="@dimen/_10sdp"
+                           android:textColor="#94F0F0"
+                           android:textSize="@dimen/_18sdp"
+                           />
+
+
+                   </LinearLayout>
+
+
+
+               </LinearLayout>
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
