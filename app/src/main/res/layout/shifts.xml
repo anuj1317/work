@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:background="@color/black">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="@dimen/_22sdp"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:id="@+id/vector"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageButton
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_21ssp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_20sdp"
+        android:id="@+id/vector2"
+        android:src="@drawable/bell"
+        android:background="@android:color/transparent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/todaytasks"
+        android:layout_width="@dimen/_281sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toBottomOf="@+id/vector"
+        android:text="Shifts"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_36sdp"
+        android:textFontWeight="600"
+        android:gravity="top"
+        android:fontFamily="@font/poppims_semibold"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/shifts"
+        app:layout_constraintStart_toStartOf="@+id/vector"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/shifts"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/todaytasks"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cvCalendar"
+        >
+
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_14sdp"
+            android:layout_width="@dimen/_14sdp"
+            android:background="@drawable/circularbutton"
+            android:backgroundTint="#246BFD"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_height="@dimen/_40sdp"
+            android:layout_width="@dimen/_63sdp"
+            android:text="Day shift"
+            android:textFontWeight="600"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppims_semibold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_15sdp"
+
+            />
+
+        <ImageButton
+            android:layout_height="@dimen/_14sdp"
+            android:layout_width="@dimen/_14sdp"
+            android:background="@drawable/circularbutton"
+            android:backgroundTint="#A06AF9"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/_24sdp"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_height="@dimen/_40sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:text="Night shift"
+            android:textFontWeight="600"
+            android:gravity="center"
+            android:fontFamily="@font/poppims_semibold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCalendar"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/shifts"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearcard"
+        android:layout_marginTop="@dimen/_15sdp"
+
+        custom:cardCornerRadius="8dp">
+
+        <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+            android:id="@+id/cdrvCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:calendar_tag="Calendar"
+            custom:date_selection_mode="free_range"
+            custom:disable_date_color="#ABABAB"
+            custom:editable="true"
+            android:background="#262A34"
+            custom:enable_time_selection="false"
+            custom:header_bg="@drawable/calendar_header"
+            custom:range_color="@color/range_bg_color_app"
+            custom:selected_date_circle_color="@color/selected_date_circle_color_app"
+            custom:title_color="@color/calendar_header_title"
+            custom:week_offset="0"
+            custom:range_date_color = "#FFFFFF"
+            custom:text_size_title = "30sp"
+            custom:text_size_week = "13sp"
+            custom:text_size_date = "13sp"
+            custom:week_color = "#5E6272"
+            custom:default_date_color="#FFFFFF"
+
+            >
+
+        </com.archit.calendardaterangepicker.customviews.DateRangeCalendarView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/linearcard"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_width="@dimen/_280sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/cvCalendar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#262A34">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="@dimen/_66sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="Start Time"
+                    android:textColor="#5E6272"
+                    android:textSize="@dimen/_13sdp"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="@dimen/_87sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="12:30AM"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="#C25FFF"
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="@dimen/_66sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="End Time"
+                    android:textColor="#5E6272"
+                    android:textSize="@dimen/_13sdp"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="@dimen/_87sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="00:00AM"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="#94F0F0"
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

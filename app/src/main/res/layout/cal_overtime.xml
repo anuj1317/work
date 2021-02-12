@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:background="@color/black">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="@dimen/_22sdp"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:id="@+id/vector"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageButton
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_21ssp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_20sdp"
+        android:id="@+id/vector2"
+        android:src="@drawable/bell"
+        android:background="@android:color/transparent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/todaytasks"
+        android:layout_width="@dimen/_281sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toBottomOf="@+id/vector"
+        android:text="Over Time"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_36sdp"
+        android:textFontWeight="600"
+        android:gravity="top"
+        android:fontFamily="@font/poppims_semibold"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/avatarlayout"
+        app:layout_constraintStart_toStartOf="@+id/vector"
+        />
+
+    <LinearLayout
+        android:id="@+id/avatarlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_25sdp"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todaytasks"
+        app:layout_constraintStart_toStartOf="@+id/todaytasks"
+        app:layout_constraintBottom_toTopOf="@+id/scrollview1"
+        >
+
+
+        <ImageButton
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/circleview"
+            android:backgroundTint="@color/teal_200"
+            android:src="@drawable/avataricon"
+            android:layout_gravity="center"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_height="@dimen/_24sdp"
+            android:layout_width="@dimen/_94sdp"
+            android:text="Derek Doyle"
+            android:layout_weight="600"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            />
+
+        <ImageButton
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:background="@drawable/circlestroke"
+            android:src="@drawable/ic_calender"
+            android:tint="@android:color/holo_green_light"
+            android:layout_marginLeft="@dimen/_5sdp"
+
+            />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_gravity="center"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_height="@dimen/_24sdp"
+                android:layout_width="@dimen/_58sdp"
+                android:text="Due Date"
+                android:textColor="#5E6272"
+                android:textSize="@dimen/_13sdp"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_height="@dimen/_24sdp"
+                android:layout_width="@dimen/_48sdp"
+                android:text="Today"
+                android:textColor="#A5F59C"
+                android:textSize="@dimen/_16sdp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollview1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatarlayout"
+
+        android:layout_marginTop="@dimen/_20sdp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCalendar"
+
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="wrap_content"
+              app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/linearcard"
+                android:layout_marginTop="@dimen/_15sdp"
+
+                custom:cardCornerRadius="@dimen/_20sdp">
+
+                <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+                    android:id="@+id/cdrvCalendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:calendar_tag="Calendar"
+                    custom:date_selection_mode="free_range"
+                    custom:disable_date_color="#ABABAB"
+                    custom:editable="true"
+                    android:background="#262A34"
+                    custom:enable_time_selection="false"
+                    custom:header_bg="@drawable/calendar_header"
+                    custom:range_color="@color/range_bg_color_app"
+                    custom:selected_date_circle_color="@color/selected_date_circle_color_app"
+                    custom:title_color="@color/calendar_header_title"
+                    custom:week_offset="0"
+                    custom:range_date_color = "#FFFFFF"
+                    custom:text_size_title = "30sp"
+                    custom:text_size_week = "13sp"
+                    custom:text_size_date = "13sp"
+                    custom:week_color = "#5E6272"
+                    custom:default_date_color="#FFFFFF"
+
+                    >
+
+                </com.archit.calendardaterangepicker.customviews.DateRangeCalendarView>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/linearcard"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_width="@dimen/_280sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@+id/cvCalendar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/cancelb"
+                >
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="#262A34">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="@dimen/_66sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:text="Start Time"
+                            android:textColor="#5E6272"
+                            android:textSize="@dimen/_13sdp"
+                            />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="@dimen/_87sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:text="12:30AM"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:textColor="#C25FFF"
+                            android:textSize="@dimen/_18sdp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="@dimen/_66sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:text="End Time"
+                            android:textColor="#5E6272"
+                            android:textSize="@dimen/_13sdp"
+                            />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="@dimen/_87sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:text="00:00AM"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:textColor="#94F0F0"
+                            android:textSize="@dimen/_18sdp"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelb"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_width="@dimen/_100sdp"
+                app:layout_constraintTop_toBottomOf="@id/linearcard"
+                app:layout_constraintStart_toStartOf="@id/linearcard"
+                app:cornerRadius="@dimen/_20sdp"
+                android:backgroundTint="@android:color/transparent"
+                android:text="Cancel"
+                android:textColor="#FF968E"
+                android:textSize="@dimen/_14sdp"
+                android:textFontWeight="700"
+                android:textAllCaps="false"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/done"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_width="@dimen/_100sdp"
+                app:layout_constraintTop_toBottomOf="@id/linearcard"
+               app:layout_constraintEnd_toEndOf="@id/linearcard"
+                android:backgroundTint="#246BFD"
+                android:text="Done"
+                app:cornerRadius="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textFontWeight="700"
+                android:textAllCaps="false"
+
+                />
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

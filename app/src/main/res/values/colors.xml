@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="calendar_header">#262A34</color>
+    <color name="calendar_header_title">#A5F59C</color>
+    <color name="selected_date_circle_color_app">#246BFD</color>
+    <color name="range_bg_color_app">#246BFD</color>
+
+    <color name="colorPrimary">#EF5350</color>
+    <color name="colorPrimaryDark">#EF5350</color>
+    <color name="colorAccent">#FF4081</color>
+
 </resources>

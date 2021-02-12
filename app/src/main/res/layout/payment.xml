@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="@dimen/_22sdp"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:id="@+id/vector"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageButton
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_21ssp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_20sdp"
+        android:id="@+id/vector2"
+        android:src="@drawable/bell"
+        android:background="@android:color/transparent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/todaytasks"
+        android:layout_width="@dimen/_281sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toBottomOf="@+id/vector"
+        android:text="Payments"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_36sdp"
+        android:textFontWeight="600"
+        android:gravity="top"
+        android:fontFamily="@font/poppims_semibold"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/searchcard"
+        app:layout_constraintStart_toStartOf="@+id/vector"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchcard"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_43sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/todaytasks"
+        app:layout_constraintStart_toStartOf="@+id/todaytasks"
+        app:layout_constraintBottom_toTopOf="@+id/payslipscard"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:cardBackgroundColor="#262A34"
+        >
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_height="@dimen/_18sdp"
+                android:layout_width="@dimen/_18sdp"
+                android:src="@drawable/ic_baseline_search_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_20sdp"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_15sdp"
+                />
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/payslipscard"
+        app:layout_constraintTop_toBottomOf="@+id/searchcard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/leaves"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:weightSum="2"
+        >
+
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_120sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardBackgroundColor="#262A34"
+            android:layout_weight="1"
+            >
+
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_width="@dimen/_40sdp"
+                    android:src="@drawable/payslipicon"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_width="@dimen/_116sdp"
+                    android:text="Pay Slips"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_120sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardBackgroundColor="#262A34"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_10sdp"
+
+            >
+
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_width="@dimen/_40sdp"
+                    android:src="@drawable/salarydicon"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_width="@dimen/_116sdp"
+                    android:text="Salary Details"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/leaves"
+        app:layout_constraintTop_toBottomOf="@+id/payslipscard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:weightSum="2"
+
+        >
+
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_120sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardBackgroundColor="#262A34"
+            android:layout_weight="1"
+            >
+
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_width="@dimen/_40sdp"
+                    android:src="@drawable/leavesicon"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_width="@dimen/_116sdp"
+                    android:text="Leaves"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_120sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardBackgroundColor="#262A34"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_10sdp"
+
+            >
+
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_width="@dimen/_40sdp"
+                    android:src="@drawable/latestpayoutsicon"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_width="@dimen/_116sdp"
+                    android:text="Latest payouts"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
